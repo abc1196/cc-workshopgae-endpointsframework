@@ -1,14 +1,30 @@
 # App Engine Standard & Google Cloud Endpoints Frameworks & Java
 
 This sample demonstrates how to use Google Cloud Endpoints Frameworks using
-Java on App Engine Standard.
+Java on App Engine Standard. The API shown refers to Colombia's professional football teams.
 
 ## Build with Maven
+
+### Setting Database
+
+To create the local MySQL database:
+
+0. Go to MySQL Workbench and create a new connection
+
+       port: 3303
+       user: root
+       password: root
+    
+0. Create a database called 'cloud_computing'.
+
+0. Import the equipos.mwb table.
 
 ### Building the sample project
 
 To build the project:
-
+    
+    mvn compile
+    mvn datanucleus:enhance
     mvn clean package
 
 ### Generating the openapi.json file
